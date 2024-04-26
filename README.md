@@ -1,12 +1,8 @@
 # windows
 
-Password info
+Scripts
 --
-Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/3.bat | Invoke-Expression
-
-Start-Process cd C:\Users\Public\AD_info.bat
-
-del AD_info.bat
+Password Info: Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/3.bat | Invoke-Expression
 
 
 NOTES:
