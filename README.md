@@ -9,8 +9,9 @@ Start-Process cd C:\Users\Public\AD_info.bat
 
 del AD_info.bat
 
---
 
+NOTES:
+--
 cd C:\Users\Public\
 
 Start-Process cd C:\Users\Public\AD_info.bat
