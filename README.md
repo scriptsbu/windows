@@ -20,6 +20,10 @@ Delete the file with the following line:
 
 del AD_info.bat
 
+or:
+
+Invoke-WebRequest -Uri https://github.com/scriptsbu/windows/raw/main/AD_info.bat -OutFile C:\Users\Public\AD_info.bat | Start-Process cd C:\Users\Public\AD_info.bat | del AD_info.bat
+
 
 To run the script from GitHub:
 --
