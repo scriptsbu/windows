@@ -1,6 +1,6 @@
 Scripts
 --
-Password Info: Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/3.bat | Invoke-Expression
+Password Info: Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/AD_info.bat | Invoke-Expression
 
 
 NOTES:
