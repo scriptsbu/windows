@@ -8,7 +8,7 @@ NOTES:
 
 To Download the script:
 --
-In terminal, execute the following line to download the script to the Public folder
+In terminal, execute the following line to download the script to the Public folder:
 
 Invoke-WebRequest -Uri https://github.com/scriptsbu/windows/raw/main/AD_info.bat -OutFile C:\Users\Public\AD_info.bat
 
