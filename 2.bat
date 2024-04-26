@@ -1,0 +1,2 @@
+net user %USERNAME%
+pause
