@@ -25,9 +25,8 @@ Write-Output "- Host Name: $hostName"
 Write-Output ""
 Write-Output "- CrowdStrike agent: $crowdStrikeInstalled, Version: $crowdStrikeVersion"
 Write-Output "- GlobalProtect agent: $globalProtectInstalled, Version: $globalProtectVersion"
-Write-Output ""
 
-# Check GlobalProtect portal login event
+
 $logFile = "C:\Program Files\Palo Alto Networks\GlobalProtect\pan_gp_event.log"
 $searchString = "Portal login completed with address"
 $prependText = "- GlobalProtect Portal login completed with:"
@@ -36,29 +35,24 @@ $result = Select-String -Path $logFile -Pattern $searchString -Context 0,0 | Sel
     "$prependText "+ $_.Line.Trim().Substring($_.Line.IndexOf($searchString) + $searchString.Length)
 }
 
-if ($result) {
-    Write-Output $result
-} else {
-    Write-Output "- GlobalProtect portal login event not found in the log file."
-}
+$result
 
+Write-Output ""
 # Check if device is enrolled in Microsoft Intune
-$enrollmentStatus = if (Test-Path "HKLM:\SOFTWARE\Microsoft\Enrollments") {
-    "This device is enrolled in Microsoft Intune."
+if (Test-Path "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\IntuneManagementExtension.log") {
+Write-Output "- MDM: This device is enrolled in Microsoft Intune."
 } else {
-    "This device is not enrolled in Microsoft Intune."
+Write-Output "- MDM: This device is not enrolled in Microsoft Intune."
 }
-Write-Output "- MDM: $enrollmentStatus"
 
 # Check Bitlocker status
-$bitlockerStatus = Get-BitLockerVolume
-$encryptionStatus = if ($bitlockerStatus.VolumeStatus -eq "FullyEncrypted") {
-    "Bitlocker is enabled on this device."
+$BitlockerStatus = Get-BitLockerVolume
+if ($BitlockerStatus.VolumeStatus -eq "FullyEncrypted") {
+Write-Output "- Encrytion: Bitlocker is enabled on this device."
 } else {
-    "Bitlocker is not enabled on this device."
+Write-Output "- Encrytion: Bitlocker is not enabled on this device."
 }
-Write-Output "- Encryption: $encryptionStatus"
 
-# Pause the script for user input
 Write-Output ""
+# Pause the script for user input
 Pause 
