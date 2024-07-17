@@ -25,6 +25,7 @@ Write-Output "- Host Name: $hostName"
 Write-Output ""
 Write-Output "- CrowdStrike agent: $crowdStrikeInstalled, Version: $crowdStrikeVersion"
 Write-Output "- GlobalProtect agent: $globalProtectInstalled, Version: $globalProtectVersion"
+Write-Output ""
 
 # Check GlobalProtect portal login event
 $logFile = "C:\Program Files\Palo Alto Networks\GlobalProtect\pan_gp_event.log"
@@ -40,7 +41,7 @@ if ($result) {
 } else {
     Write-Output "- GlobalProtect portal login event not found in the log file."
 }
-Write-Output ""
+
 # Check if device is enrolled in Microsoft Intune
 $enrollmentStatus = if (Test-Path "HKLM:\SOFTWARE\Microsoft\Enrollments") {
     "This device is enrolled in Microsoft Intune."
