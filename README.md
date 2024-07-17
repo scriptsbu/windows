@@ -25,7 +25,9 @@ To run the script from GitHub:
 --
 
 AD INFO
+
 Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/AD_info.bat | Invoke-Expression
 
 Remote-Check
+
 Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/remote-check.ps1 | Invoke-Expression
