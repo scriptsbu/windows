@@ -31,3 +31,8 @@ Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/AD_info.bat
 Remote-Check
 
 Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/remote-check.ps1 | Invoke-Expression
+
+CS Removal:
+
+Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/cs.ps1 | Invoke-Expression
+
