@@ -39,3 +39,10 @@ Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/cs.ps1 | In
 CS Removal - No Admin:
 
 Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/remove.ps1 | Invoke-Expression
+
+CMD BAT
+
+Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/cmd.bat | Invoke-Expression
+
+
+
