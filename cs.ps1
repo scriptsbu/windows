@@ -1,5 +1,5 @@
 $directoryPath = "C:\Windows\System32\drivers\Crowdstrike"
-$searchPattern = "*C-000000291*"
+$searchPattern = "*C-00000291*"
 
 $fileToDelete = Get-ChildItem -Path $directoryPath -Filter $searchPattern -ErrorAction SilentlyContinue
 
