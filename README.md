@@ -36,3 +36,6 @@ CS Removal:
 
 Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/cs.ps1 | Invoke-Expression
 
+CS Removal - No Admin:
+
+Invoke-RestMethod -Uri https://github.com/scriptsbu/windows/raw/main/remove.ps1 | Invoke-Expression
