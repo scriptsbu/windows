@@ -15,3 +15,4 @@ if ($fileToDelete) {
 } else {
     Write-Output "No file containing 'C-00000291' was found in the directory '$directoryPath'."
 }
+pause
