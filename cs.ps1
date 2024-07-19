@@ -13,5 +13,5 @@ if ($fileToDelete) {
         Write-Output "An error occurred while trying to delete the file: $($_.Exception.Message)"
     }
 } else {
-    Write-Output "No file containing 'C-000000291' was found in the directory '$directoryPath'."
+    Write-Output "No file containing 'C-00000291' was found in the directory '$directoryPath'."
 }
