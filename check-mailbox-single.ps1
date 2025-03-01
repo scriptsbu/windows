@@ -1,5 +1,5 @@
 # Connect to Exchange Online
-Connect-ExchangeOnline -UserPrincipalName alberto.santiago.1@torc.ai
+Connect-ExchangeOnline -UserPrincipalName replacewith@email.com
 
 # Check a single user
-Get-Mailbox -Identity "alberto.santiago@torc.ai"
+Get-Mailbox -Identity "replacewith@email.com"
