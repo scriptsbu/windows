@@ -1,8 +1,8 @@
 # Connect to Exchange Online
-Connect-ExchangeOnline -UserPrincipalName alberto.santiago.1@torc.ai
+Connect-ExchangeOnline -UserPrincipalName replacewith@email.com
 
 # Import the CSV file
-$users = Import-Csv -Path "C:\Users\alberto.santiago.1.ALBERTO-TEST\Desktop\users.csv"
+$users = Import-Csv -Path "C:\Users\path\to\file"
 
 # Loop through each user and check for mailbox
 foreach ($user in $users) {
